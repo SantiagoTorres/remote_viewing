@@ -1,6 +1,6 @@
-function reset() {
+function reset(items) {
   var xhr = new XMLHttpRequest();
-  var url = "http://example.amazonaws.com/reset";
+  var url = items.proxy + "/reset";
   var message;
 
   xhr.open("GET", url, true);
@@ -18,7 +18,7 @@ function reset() {
 }
 
 function resetOnClick(e) {
-  reset();
+  chrome.storage.sync.get({proxy: proxy}, reset);
 }
 
 document.addEventListener('DOMContentLoaded', function() {
