@@ -10,12 +10,14 @@ function showOptionsSaved() {
 function saveOptions() {
   var proxy = document.getElementById('proxy').value;
   //TODO: Ensure proxy URL matches the pattern: 'http://.*.amazonaws.com'
-  if (/^http:\/\/\w+.amazonaws.com$/.test(proxy)){
-  chrome.storage.sync.set({proxy: proxy}, showOptionsSaved);
+  //if (/^http:\/\/\w+.amazonaws.com$/.test(proxy)){
+      chrome.storage.sync.set({proxy: proxy}, showOptionsSaved);
+      /*
   }
   else {
       document.getElementById('status').textContent = 'Invalid URL';
   }
+  */
 }
 
 function setOptions(items) {
