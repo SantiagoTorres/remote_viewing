@@ -4,6 +4,11 @@ import socket
 import atexit
 import threading
 
+def get_img_tag(url, browser=webdriver.Firefox()):
+    browser.get(url)
+    png = browser.get_screenshot_as_base64()
+    return "<img src='data:image/png;base64,{}'>".format(png)+
+
 browser = webdriver.Firefox()
 
 HOST = ''
@@ -13,6 +18,7 @@ serverSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 serverSocket.bind((HOST, PORT))
 serverSocket.listen(5)
+
 
 @atexit.register
 def quit_server():
