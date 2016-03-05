@@ -4,9 +4,17 @@
   "name": "Remote Viewing",
   "description": "To view a web page more safely, this extension renders the page remotely on a virtual machine instead.",
   "homepage_url": "https://github.com/SantiagoTorres/remote_viewing",
-  "version": "0.1a",
+  "version": "0.1",
 
-  "permissions": ["contextMenus"],
+  "browser_action": {
+    "default_title": "Remote Viewing",
+    "default_popup": "popup.html"
+  },
+
+  "permissions": [
+    "contextMenus",
+    "http://*.amazonaws.com/"
+  ],
   "background": {
     "persistent": false,
     "scripts": ["fetch.js"]
