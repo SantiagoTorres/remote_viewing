@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+
+  "name": "Remote Viewing",
+  "description": "To view a web page more safely, this extension renders the page remotely on a virtual machine instead.",
+  "homepage_url": "https://github.com/SantiagoTorres/remote_viewing",
+  "version": "0.1a",
+
+  "permissions": ["contextMenus"],
+  "background": {
+    "persistent": false,
+    "scripts": ["fetch.js"]
+  }
+}
