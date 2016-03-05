@@ -4,7 +4,7 @@ import socket
 import atexit
 import threading
 
-browser = webdriver.Chrome()
+browser = webdriver.Firefox()
 
 HOST = ''
 PORT = 8000
