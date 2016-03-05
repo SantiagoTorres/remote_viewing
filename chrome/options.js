@@ -1,21 +1,15 @@
-var status = document.getElementById('status');
-var defaultProxy = 'http://EXAMPLE.amazonaws.com'
-
-function hideOptionsSaved() {
-  status.textContent = '';
-}
-
 function restoreOptions() {
+  var defaultProxy = 'http://EXAMPLE.amazonaws.com'
   chrome.storage.sync.get({proxy: defaultProxy}, setOptions);
 }
 
 function showOptionsSaved() {
-  status.textContent = 'Options saved.';
-  window.setTimeout(hideOptionsSaved, 750);
+  document.getElementById('status').textContent = 'Options saved.';
 }
 
 function saveOptions() {
   var proxy = document.getElementById('proxy').value;
+  //TODO: Ensure proxy URL matches the pattern: 'http://.*.amazonaws.com'
   chrome.storage.sync.set({proxy: proxy}, showOptionsSaved);
 }
 
