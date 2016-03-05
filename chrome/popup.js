@@ -22,6 +22,6 @@ function resetOnClick(e) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  var resetButton = document.querySelector('#reset');
+  var resetButton = document.getElementById('reset');
   resetButton.addEventListener('click', resetOnClick)
 });
