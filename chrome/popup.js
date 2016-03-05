@@ -18,7 +18,8 @@ function reset(items) {
 }
 
 function resetOnClick(e) {
-  chrome.storage.sync.get({proxy: proxy}, reset);
+  var defaultProxy = 'http://EXAMPLE.amazonaws.com'
+  chrome.storage.sync.get({proxy: defaultProxy}, reset);
 }
 
 document.addEventListener('DOMContentLoaded', function() {
