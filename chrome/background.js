@@ -1,7 +1,12 @@
 function onLinkClick(info, tab) {
-  chrome.tabs.create({
-    url: info.linkUrl
-  });
+  function openNewTab(items) {
+    chrome.tabs.create({
+      url: items.proxy + "?target=" + info.linkUrl
+    });
+  }
+
+  var defaultProxy = 'http://EXAMPLE.amazonaws.com'
+  chrome.storage.sync.get({proxy: defaultProxy}, openNewTab);
 }
 
 var id = chrome.contextMenus.create({

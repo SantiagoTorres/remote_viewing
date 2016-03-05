@@ -1,11 +1,12 @@
 var status = document.getElementById('status');
+var defaultProxy = 'http://EXAMPLE.amazonaws.com'
 
 function hideOptionsSaved() {
   status.textContent = '';
 }
 
 function restoreOptions() {
-  chrome.storage.sync.get({proxy: proxy}, setOptions);
+  chrome.storage.sync.get({proxy: defaultProxy}, setOptions);
 }
 
 function showOptionsSaved() {
@@ -15,7 +16,6 @@ function showOptionsSaved() {
 
 function saveOptions() {
   var proxy = document.getElementById('proxy').value;
-
   chrome.storage.sync.set({proxy: proxy}, showOptionsSaved);
 }
 
