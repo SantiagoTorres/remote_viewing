@@ -20,3 +20,7 @@ suspicious package for you. If it explodes, too bad for the robot, but you can a
 ### Architecture
 
 ![Remote Viewing Architecture](https://github.com/SantiagoTorres/remote_viewing/blob/master/docs/IMG_2132.JPG)
+
+## Acknowledgements
+
+* [CIA](http://skepdic.com/remotevw.html).
