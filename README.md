@@ -17,6 +17,8 @@ usability for average users.
 Our solution is simple: let a virtual machine open that untrusted link for you. It is like using a robot to remotely open that
 suspicious package for you. If it explodes, too bad for the robot, but you can always build a new one.
 
+One nice thing about this solution is that it is smartphone-friendly: the virtual machine may be on a remote machine. Using a remote virtual machine also reduces the risk of attackers compromising the original machine.
+
 ### Architecture
 
 ![Remote Viewing Architecture](https://github.com/SantiagoTorres/remote_viewing/blob/master/docs/IMG_2132.JPG)
